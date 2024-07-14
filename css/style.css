@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+/* pegar arriba de la pantalla */
+/* */
+    border: 1px black double;
+}
+
+footer{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.386);
+    position:static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
