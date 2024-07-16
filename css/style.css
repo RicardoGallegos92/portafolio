@@ -1,9 +1,30 @@
-*{
+.arsenal {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
+}  
+
+:root{
+    --COLOR_PRINCIPAL_TEXTO: #FFFFFF;
+    --COLOR_PRINCIPAL_FONDO:#000000;
+    --COLOR_PRINCIPAL_FOOTER: rgba(100, 100, 100, 0.385);
+}
+
+html{
+    scroll-behavior: smooth;
     box-sizing: border-box;
+    color:white;
+    background-color: var(--COLOR_PRINCIPAL_FONDO);
+}
+
+a {
+    text-decoration-line: none;
+    color: var(--COLOR_PRINCIPAL_TEXTO);
 }
 
 body{
     margin: 0;
+    padding: 1vh 1vw;
 }
 
 .navbar,
@@ -12,13 +33,22 @@ body{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 /* pegar arriba de la pantalla */
     border: 4px black double;
 }
 
 .navbar>ul{
+    display: none;
     width: 50vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 ul>li::marker{
@@ -26,43 +56,92 @@ ul>li::marker{
 }
 
 #Cuerpo{
-
     padding: 15px;
     border: 5px double black;
-    background-color: blueviolet;
+    >*{
+        margin: 3rem 0;
+    }
+}
+
+#Presentacion{
+    display: flex;
+    flex-flow: column nowrap;
+    section:nth-child(2){
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
 }
 
 #FotoPerfil{
     border: 3px solid gold;
     border-radius: 50%;
-    width: 25vw;
+    height: 25vw;
+    width: auto;
 }
 
 #LinkRedes{
-    background-color: red;
+/*    background-color: red;
+*/
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    i {
+        font-size: 40px;
+    }
 }
 
-#Habilidades{
+#SobreMi{
+    margin:20px 0;
+}
+
+#Habilidades,
+#Hobbies{
         display: grid;
+/* grid: alto ancho /
+ancho de cada columna separada por un espacio */
+        grid: auto auto / auto auto;
         >i{
             font-size: 40px;
             text-align: center;
+            margin: 5vw 5vh;
+            padding:10px;
+            background-color: var(--COLOR_PRINCIPAL_FOOTER);
         }
-        >:nth-last-child(even){
-            grid-column: 1;
+}
+
+#Contacto{
+    display: flex;
+    flex-flow: row wrap;
+    >h2{
+        width: 100%;
+    }
+    >img{
+        display: none;
+        width: 20%;
+        height: auto;
+    }
+    >form{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        >label{
+            margin: 1rem 0 0 0;
         }
-        >:nth-last-child(odd){
-            grid-column: 2;
+        input[type=submit]{
+            margin: 2rem 0;
+            padding: 10px 20px;
+            width:fit-content;
+            align-self: center;
         }
+    }
 }
 
 footer{
     color: white;
-    background-color: rgba(0, 0, 0, 0.386);
+    background-color: var(--COLOR_PRINCIPAL_FOOTER);
     position:static;
     width: 100%;
     display: flex;
@@ -70,30 +149,54 @@ footer{
 }
 
 @media (min-width: 377px) {
-    #Presentacion{
-        background-color: yellow;
+    .navbar ul{
         display: flex;
-        flex-flow: row nowrap;
+    }
+    #Presentacion{
+/*        background-color: yellow;
+*/
+        display: flex;
+        flex-flow: row-reverse nowrap;
     }
     #FotoPerfil{
         image-rendering:pixelated;
         height: 15vw;
     }
-    #Habilidades>i{
-        font-size: 50px;
+    #Habilidades{
+        grid: auto auto / auto auto auto;
+        >i{
+            font-size: 50px;
+        }
+    }
+    #Hobbies{
+        grid: auto auto / auto auto;
     }
 }
 @media (min-width: 780px) {
     #Presentacion{
-        background-color: green;
+/*        background-color: green;
+*/
     }
     #FotoPerfil{
         height: 20vw;
     }
 
     #Habilidades{        
+        grid: auto auto / auto auto auto auto auto auto auto;
         >i{
             font-size: 60px;
+        }
+    }
+    #Hobbies{
+        grid: auto auto / auto auto auto auto;
+    }
+    #Contacto{
+        >img{
+            width: 20%;
+            display: block;
+        }
+        >form{
+            width: 60%;
         }
     }
 }

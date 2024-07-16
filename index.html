@@ -9,7 +9,11 @@
     <!-- fontawesome.com -->
     <script src="https://kit.fontawesome.com/dd3e7e5350.js"
         crossorigin="anonymous">
-        </script>
+    </script>
+    <!-- Google Font 'Arsenal SC' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,11 +22,11 @@
         <nav class="navbar">
             <h4 id="nombrePortafolio">Ricardo Gallegos</h4>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li><a href="#LinkRedes">Redes</a></li>
+                <li><a href="#SobreMi">Sobre Mi</a></li>
+                <li><a href="#Habilidades">Habilidades</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -30,30 +34,37 @@
     <section id="Cuerpo">
         <!-- Presentación -->
         <div id="Presentacion">
-            <img id="FotoPerfil" src="./img/fotoPerfil.png"
-                alt="Foto de Perfil">
-            <h2>
-                Hola, Soy Ricardo Gallegos y me encantaría trabajar para
-                [tu empresa] ya que realmente me apasiona el desarrollo
-                (tengo hobbys caros deme dinero
-                <i class="fa-solid fa-money-bill-trend-up"></i>
-                ).
-            </h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima
-                ea explicabo porro ad tempora harum mollitia architecto,
-                provident cumque error amet alias cum voluptate, eum beatae enim
-                quam nam inventore voluptas! Laboriosam, mollitia maiores eaque
-                enim ut illo laborum non vel nisi quia? Quos animi incidunt est
-                sed ipsum tenetur.
-            </p>
+            <section>
+                <img id="FotoPerfil" src="./img/fotoPerfil.png"
+                    alt="Foto de Perfil">
+            </section>
+            <section>
+                <h2>
+                    Hola, Soy Ricardo Gallegos y me encantaría trabajar para
+                    [tu empresa] ya que realmente me apasiona el desarrollo
+                    (tengo hobbys caros deme dinero
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    ).
+                </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Minima
+                    ea explicabo porro ad tempora harum mollitia architecto,
+                    provident cumque error amet alias cum voluptate, eum beatae
+                    enim
+                    quam nam inventore voluptas! Laboriosam, mollitia maiores
+                    eaque
+                    enim ut illo laborum non vel nisi quia? Quos animi incidunt
+                    est
+                    sed ipsum tenetur.
+                </p>
+                <ul id="LinkRedes">
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+            </section>
         </div>
-        <ul id="LinkRedes">
-            <li><i class="fa-brands fa-whatsapp"></i></li>
-            <li><i class="fa-solid fa-envelope"></i></li>
-            <li>c</li>
-            <li>d</li>
-            <li>e</li>
-        </ul>
         <div id="SobreMi">
             <h2>
                 Sobre Mi
@@ -74,7 +85,9 @@
             </p>
         </div> <!-- Fin #SobreMi -->
         <!-- Habilidades -->
+        <h2>Skills</h2>
         <div id="Habilidades">
+            <i class="fa-solid fa-flag-usa"></i>
             <i class="fa-brands fa-js"></i>
             <i class="fa-brands fa-python"></i>
             <i class="fa-brands fa-html5"></i>
@@ -82,18 +95,41 @@
             <i class="fa-solid fa-database"></i>
             <i class="fa-brands fa-java"></i>
         </div> <!-- Fin #Habilidades -->
+        <h2>Hobbies</h2>
         <div id="Hobbies">
-
+            <i class="fa-solid fa-gamepad"></i>
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <i class="fa-solid fa-film"></i>
+            <i class="fa-solid fa-dumbbell"></i>
         </div> <!-- Fin #Hobbies -->
+        <!-- Formacion -->
+        <div id="Formación">
+            <h2>Formación</h2>
+        </div>
+        <!-- Experiencia -->
+        <div id="Experiencia">
+            <h2>Experiencia</h2>
+        </div>
+        <!-- Contactame -->
         <div id="Contacto">
-            <form action="POST">
-
+            <h2>Contactame</h2>
+            <img src="./img/call-me.png" alt="">
+            <form action="">
+                <label for="fname">Nombre:</label>
+                <input type="text" id="fname" name="fname" placeholder="Nombre">
+                <label for="email">Correo:</label>
+                <input type="mail" id="email" name="email" placeholder="e-mail">
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Asunto">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" cols="50"></textarea>
+                <input type="submit" value="Submit">
             </form>
         </div> <!-- Fin #Contacto -->
     </section> <!-- Fin #Cuerpo -->
     <!-- Footer -->
     <footer>
-        <p>Desarrollado por ~Sanson~</p>
+        <p>Desarrollado por <strong class="arsenal">~SansoN~</strong></p>
     </footer>
 
 </body>
