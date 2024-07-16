@@ -116,9 +116,20 @@ ancho de cada columna separada por un espacio */
         }
 }
 
-#Formacion,
-#Experiencia{
+#Formacion{
     display: none;
+}
+
+#Experiencia{
+    display: flex;
+    flex-flow: column wrap-reverse;
+    a{
+        margin: 0 auto;
+    }
+    img{
+        margin: 2rem 0;
+        width: 100%;
+    }
 }
 
 #Contacto{
