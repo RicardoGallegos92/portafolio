@@ -193,6 +193,14 @@ footer{
     #Hobbies{
         grid: auto auto / auto auto;
     }
+    #Experiencia{
+        a{
+            text-align: center;
+        }
+        img{
+            width: 50%;
+        }
+    }
 }
 @media (min-width: 780px) {
     #FotoPerfil{
