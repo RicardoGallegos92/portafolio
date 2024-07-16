@@ -88,8 +88,13 @@ ul>li::marker{
     flex-wrap: nowrap;
     justify-content: space-evenly;
     i {
-        font-size: 40px;
+        font-size: 25px;
     }
+}
+
+.CSSBattle{
+    filter: grayscale();
+    height: 100%;
 }
 
 #SobreMi{
@@ -111,6 +116,11 @@ ancho de cada columna separada por un espacio */
         }
 }
 
+#Formacion,
+#Experiencia{
+    display: none;
+}
+
 #Contacto{
     display: flex;
     flex-flow: row wrap;
@@ -121,6 +131,7 @@ ancho de cada columna separada por un espacio */
         display: none;
         width: 20%;
         height: auto;
+        filter: grayscale();
     }
     >form{
         width: 80%;
