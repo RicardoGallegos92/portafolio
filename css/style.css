@@ -173,10 +173,6 @@ footer{
     }
 }
 @media (min-width: 780px) {
-    #Presentacion{
-/*        background-color: green;
-*/
-    }
     #FotoPerfil{
         height: 20vw;
     }
